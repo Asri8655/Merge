@@ -1,0 +1,122 @@
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/git 2 (master)
+$ cd d:
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d
+$ dir
+$RECYCLE.BIN  Merge  System\ Volume\ Information  dif  git\ 2
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d
+$ cd Merge/
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge
+$ git init
+Initialized empty Git repository in D:/Merge/.git/
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (master)
+$ git remote add origin "https://github.com/Asri8655/v1v2.git"
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (master)
+$ git add f1.txt
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (master)
+$ git commit -m "master"
+[master (root-commit) 7818247] master
+ 1 file changed, 5 insertions(+)
+ create mode 100644 f1.txt
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 258 bytes | 258.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Asri8655/v1v2.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (master)
+$ git branch version1
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (master)
+$ git checkout version1
+Switched to branch 'version1'
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version1)
+$ git add f2.txt
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version1)
+$ git commit -m "v1'
+> "
+[version1 658f958] v1'
+ 1 file changed, 4 insertions(+)
+ create mode 100644 f2.txt
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version1)
+$ git push -u f2.txt
+fatal: invalid gitfile format: f2.txt
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version1)
+$ git push -u origin version1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'version1' on GitHub by visiting:
+remote:      https://github.com/Asri8655/v1v2/pull/new/version1
+remote:
+To https://github.com/Asri8655/v1v2.git
+ * [new branch]      version1 -> version1
+Branch 'version1' set up to track remote branch 'version1' from 'origin'.
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version1)
+$ git branch version2
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version1)
+$ git checkout version2
+Switched to branch 'version2'
+M       f2.txt
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version2)
+$ git add  f2.txt
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version2)
+$ git commit -m "version2"
+[version2 a8e6321] version2
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version2)
+$ git push -u origin version2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'version2' on GitHub by visiting:
+remote:      https://github.com/Asri8655/v1v2/pull/new/version2
+remote:
+To https://github.com/Asri8655/v1v2.git
+ * [new branch]      version2 -> version2
+Branch 'version2' set up to track remote branch 'version2' from 'origin'.
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version2)
+$ git checkout version1
+Switched to branch 'version1'
+Your branch is up to date with 'origin/version1'.
+
+angun@LAPTOP-2Q4G9P12 MINGW64 /d/Merge (version1)
+$ git merge version2
+Updating 658f958..a8e6321
+Fast-forward
+ f2.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
